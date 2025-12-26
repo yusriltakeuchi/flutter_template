@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class RadioButtonWidget extends StatelessWidget {
@@ -22,11 +23,13 @@ class RadioButtonWidget extends StatelessWidget {
               index,
               AnimatedCrossFade(
                 firstChild: _radioItem(
+                  context: context,
                   title: value,
                   selected: true,
                   onClick: () => onChange(value),
                 ),
                 secondChild: _radioItem(
+                  context: context,
                   title: value,
                   selected: false,
                   onClick: () => onChange(value),
@@ -44,6 +47,7 @@ class RadioButtonWidget extends StatelessWidget {
   }
 
   Widget _radioItem({
+    required BuildContext context,
     required String title,
     required bool selected,
     required VoidCallback onClick,
@@ -62,7 +66,7 @@ class RadioButtonWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: selected ? MyTheme.color.primary : MyTheme.color.black,
+                  color: selected ? MyTheme.color.primary : context.blackWhiteColor,
                 ),
               ),
               child: Padding(

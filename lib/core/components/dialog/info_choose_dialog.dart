@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/core/components/button/primary_button.dart';
 import 'package:flutter_template/core/components/button/primary_outline_button.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/gen/assets.gen.dart';
 
 import '../../../config/app_config.dart';
@@ -77,7 +78,7 @@ class InfoChooseDialog extends StatelessWidget {
                       description,
                       style: MyTheme.style.subtitle.copyWith(
                         fontSize: AppSetting.setFontSize(35),
-                        color: MyTheme.color.black,
+                        color: context.blackWhiteColor,
                       ),
                     )
                   ],

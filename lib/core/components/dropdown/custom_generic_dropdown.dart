@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/gen/assets.gen.dart';
 import 'package:flutter_template/theme/theme.dart';
 
@@ -81,7 +82,7 @@ class CustomGenericDropdown<T> extends StatelessWidget {
                           hintText,
                           style: MyTheme.style.title.copyWith(
                             fontSize: AppSetting.setFontSize(fontSize),
-                            color: MyTheme.color.grey,
+                            color: context.greyDarkColor,
                             fontWeight: FontWeight.normal,
                           ),
                         ),

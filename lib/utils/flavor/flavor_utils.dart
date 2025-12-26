@@ -28,7 +28,7 @@ class FlavorUtils {
       primaryLightColor: const Color(0xff022f66),
       secondaryColor: const Color(0xffDAB272),
       api: FlavorAPIModel(
-        baseURL: "https://reqres.in/api",
+        baseURL: "https://dummyjson.com",
       ),
     ),
     FlavorModel(
@@ -40,7 +40,7 @@ class FlavorUtils {
       primaryLightColor: const Color(0xff022f66),
       secondaryColor: const Color(0xffDAB272),
       api: FlavorAPIModel(
-        baseURL: "https://reqres.in/api",
+        baseURL: "https://dummyjson.com",
       ),
     ),
     FlavorModel(
@@ -52,7 +52,7 @@ class FlavorUtils {
       primaryLightColor: const Color(0xff022f66),
       secondaryColor: const Color(0xffDAB272),
       api: FlavorAPIModel(
-        baseURL: "https://reqres.in/api",
+        baseURL: "https://dummyjson.com",
       ),
     ),
   ];

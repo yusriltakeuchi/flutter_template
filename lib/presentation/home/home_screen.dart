@@ -6,6 +6,7 @@ import 'package:flutter_template/bloc/user/user_bloc.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/idle/idle_item.dart';
 import 'package:flutter_template/core/components/loading/loading_listview.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 @RoutePage()
@@ -24,7 +25,9 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         automaticallyImplyLeading: false,
-        backgroundColor: MyTheme.color.primary,
+        backgroundColor: context.isDark
+          ? context.containerColor
+          : MyTheme.color.primary,
         actions: [
           /// Icon button choose popup menu button theme from Light, Dark or System
           PopupMenuButton<ThemeMode>(
@@ -79,6 +82,9 @@ class HomeBody extends StatelessWidget {
               itemBuilder: (context, index) {
                 final user = users[index];
                 return ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(user.avatar ?? ""),
+                  ),
                   title: Text("${user.firstName} ${user.lastName}"),
                   subtitle: Text(user.email ?? ""),
                 );

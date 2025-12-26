@@ -123,7 +123,7 @@ class AppTheme {
       hintColor: MyTheme.color.primary,
       scaffoldBackgroundColor: MyTheme.color.black,
       appBarTheme: AppBarTheme(
-        color: MyTheme.color.primary,
+        backgroundColor: MyTheme.color.primary,
         iconTheme: IconThemeData(color: MyTheme.color.white),
       ),
       colorScheme: ColorScheme.dark(
@@ -143,7 +143,6 @@ class AppTheme {
       ),
       iconButtonTheme: IconButtonThemeData(
         style: IconButton.styleFrom(
-          backgroundColor: MyTheme.color.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

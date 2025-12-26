@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class FilterItemCheck extends StatefulWidget {
@@ -30,7 +31,7 @@ class _FilterItemCheckState extends State<FilterItemCheck> {
           widget.title,
           style: MyTheme.style.title.copyWith(
             fontSize: AppSetting.setFontSize(40),
-            color: MyTheme.color.black,
+            color: context.blackWhiteColor,
           ),
         ),
         Wrap(
@@ -89,7 +90,7 @@ class CheckBoxItem extends StatelessWidget {
             title,
             style: MyTheme.style.subtitle.copyWith(
               fontSize: AppSetting.setFontSize(35),
-              color: MyTheme.color.black,
+              color: context.blackWhiteColor,
             ),
           ),
         ],

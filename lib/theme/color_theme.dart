@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/app.dart';
 import 'package:flutter_template/utils/flavor/flavor_utils.dart';
 
 class PColor {
@@ -29,9 +28,4 @@ class PColor {
   Color orange = const Color(0xffE8A01D);
   Color limeGreen = const Color(0xff4BAC87);
   Color brown = const Color(0xff66460D);
-
-  /// Listen to theme mode so white and black based on the theme mode
-  Color get blackWhite {
-    return Theme.of(appRouter.navigatorKey.currentState!.context).brightness == Brightness.dark ? white : black;
-  }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/conditional/conditional_item.dart';
@@ -81,7 +82,7 @@ class ModalBottomSheet {
                                       onTap: () => onClose != null ? onClose() : {},
                                       child: Icon(
                                         Icons.close,
-                                        color: MyTheme.color.black.withValues(alpha: 0.7),
+                                        color: context.blackWhiteColor.withValues(alpha: 0.7),
                                       ),
                                     )
                                   ),

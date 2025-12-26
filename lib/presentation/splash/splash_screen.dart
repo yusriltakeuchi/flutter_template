@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/bloc/auth/auth_session_bloc.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/idle/idle_item.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/routing/route.gr.dart';
 import 'package:flutter_template/theme/theme.dart';
 import 'package:flutter_template/utils/flavor/flavor_utils.dart';
@@ -72,7 +73,7 @@ class _SplashBodyState extends State<SplashBody> {
                   Text(
                     flavor.current.name,
                     style: MyTheme.style.title.copyWith(
-                      color: MyTheme.color.blackWhite,
+                      color: context.blackWhiteColor,
                       fontSize: AppSetting.setFontSize(50),
                     ),
                   )
@@ -93,7 +94,7 @@ class _SplashBodyState extends State<SplashBody> {
                     Text(
                       "Ver 1.0.0",
                       style: MyTheme.style.subtitle.copyWith(
-                        color: MyTheme.color.black,
+                        color: context.blackWhiteColor,
                         fontSize: AppSetting.setFontSize(40),
                       ),
                     ),

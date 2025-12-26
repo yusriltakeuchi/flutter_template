@@ -17,7 +17,7 @@ import 'package:flutter_template/presentation/splash/splash_screen.dart' as _i2;
 /// [_i1.HomeScreen]
 class HomeRoute extends _i3.PageRouteInfo<void> {
   const HomeRoute({List<_i3.PageRouteInfo>? children})
-    : super(HomeRoute.name, initialChildren: children);
+      : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
@@ -33,7 +33,7 @@ class HomeRoute extends _i3.PageRouteInfo<void> {
 /// [_i2.SplashScreen]
 class SplashRoute extends _i3.PageRouteInfo<void> {
   const SplashRoute({List<_i3.PageRouteInfo>? children})
-    : super(SplashRoute.name, initialChildren: children);
+      : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 

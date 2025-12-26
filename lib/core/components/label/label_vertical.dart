@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class LabelVertical extends StatelessWidget {
@@ -44,7 +45,7 @@ class LabelVertical extends StatelessWidget {
               textAlign: textAlign,
               style: MyTheme.style.title.copyWith(
                 fontSize: AppSetting.setFontSize(fontSize),
-                color: valueColor ?? MyTheme.color.black,
+                color: valueColor ?? context.blackWhiteColor,
               ),
             )
       ],

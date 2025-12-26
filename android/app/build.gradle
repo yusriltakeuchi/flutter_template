@@ -31,12 +31,17 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.template.flutter_template"
-    compileSdk = 34
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    // Force Java compile ke 17
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
 
@@ -67,8 +72,8 @@ android {
         applicationId = "com.template.flutter_template"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = 21
-        targetSdk = 34
+        minSdkVersion = flutter.minSdkVersion
+        targetSdk = 36
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
     }

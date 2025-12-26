@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_template/config/app_config.dart';
-import 'package:flutter_template/theme/theme.dart';
+import 'package:flutter_template/extension/extensions.dart';
 
 class LoadingGrid extends StatelessWidget {
   final double height;
@@ -34,7 +34,7 @@ class LoadingGrid extends StatelessWidget {
         return Container(
           height: AppSetting.setHeight(height),
           decoration: BoxDecoration(
-            color: MyTheme.color.grey.withValues(alpha: 0.3),
+            color: context.greyDarkColor.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(5),
             boxShadow: useShadow
                 ? [
@@ -80,7 +80,7 @@ class LoadingGridMini extends StatelessWidget {
         return Container(
           height: height ?? AppSetting.setHeight(180),
           decoration: BoxDecoration(
-            color: MyTheme.color.grey.withValues(alpha: 0.3),
+            color: context.greyDarkColor.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(5),
           ),
         );

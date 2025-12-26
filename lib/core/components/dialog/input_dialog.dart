@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class InputDialog extends StatelessWidget {
@@ -67,7 +68,7 @@ class InputDialog extends StatelessWidget {
               hintText: hintText,
               hintStyle: MyTheme.style.subtitle.copyWith(
                 fontSize: AppSetting.setFontSize(36),
-                color: MyTheme.color.grey
+                color: context.greyDarkColor
               ),
             ),
           ),

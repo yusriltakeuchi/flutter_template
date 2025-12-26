@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class Expandable extends StatefulWidget {
@@ -67,7 +68,7 @@ class _ExpandableState extends State<Expandable> {
                           widget.title,
                           style: MyTheme.style.title.copyWith(
                             fontSize: AppSetting.setFontSize(35),
-                            color: MyTheme.color.black,
+                            color: context.blackWhiteColor,
                           ),
                         ),
                       ],
@@ -76,7 +77,7 @@ class _ExpandableState extends State<Expandable> {
                       expand
                           ? Icons.keyboard_arrow_down
                           : Icons.keyboard_arrow_right,
-                      color: MyTheme.color.black,
+                      color: context.blackWhiteColor,
                       size: AppSetting.setFontSize(60),
                     ),
                   ],
@@ -96,7 +97,7 @@ class _ExpandableState extends State<Expandable> {
                       widget.description,
                       style: MyTheme.style.subtitle.copyWith(
                         fontSize: AppSetting.setFontSize(35),
-                        color: MyTheme.color.black,
+                        color: context.blackWhiteColor,
                       ),
                     ),
                   ),

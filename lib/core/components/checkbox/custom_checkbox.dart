@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class CustomCheckbox extends StatelessWidget {
@@ -30,7 +31,7 @@ class CustomCheckbox extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
               color: selected ? MyTheme.color.primary : Colors.white,
               border: Border.all(
-                color: selected ? MyTheme.color.primary : MyTheme.color.grey,
+                color: selected ? MyTheme.color.primary : context.greyDarkColor,
                 width: 1,
               ),
             ),
@@ -52,7 +53,7 @@ class CustomCheckbox extends StatelessWidget {
           Text(
             title,
             style: MyTheme.style.subtitle.copyWith(
-              color: textColor ?? MyTheme.color.black,
+              color: textColor ?? context.blackWhiteColor,
               fontSize: AppSetting.setFontSize(fontSize),
             ),
           )

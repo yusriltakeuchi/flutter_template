@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/dropdown/custom_generic_dropdown.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class FilterItemDropdown extends StatelessWidget {
@@ -26,7 +27,7 @@ class FilterItemDropdown extends StatelessWidget {
           title,
           style: MyTheme.style.title.copyWith(
             fontSize: AppSetting.setFontSize(40),
-            color: MyTheme.color.black,
+            color: context.blackWhiteColor,
           ),
         ),
         Space.h(20),
@@ -46,7 +47,7 @@ class FilterItemDropdown extends StatelessWidget {
                       item,
                       style: MyTheme.style.subtitle.copyWith(
                         fontSize: AppSetting.setFontSize(40),
-                        color: MyTheme.color.black,
+                        color: context.blackWhiteColor,
                       ),
                     ),
                   );

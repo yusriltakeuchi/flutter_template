@@ -15,7 +15,11 @@ class BaseResponseList<T> {
     return BaseResponseList(
       message: json['message'] ?? "",
       responseCode: responseCode,
-      data: json['data'] != null ? fromJsonData(json['data'] is String ? json : json['data']) : []
+      data: json['data'] != null
+        ? fromJsonData(json['data'] is String ? json : json['data'])
+        : json['users'] != null
+          ? fromJsonData(json['users'] is String ? json : json['users'])
+          : []
     );
   }
 }

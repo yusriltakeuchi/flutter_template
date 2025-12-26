@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/click/click_item.dart';
 import 'package:flutter_template/core/components/conditional/conditional_item.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class FilterButton extends StatelessWidget {
@@ -40,7 +41,7 @@ class FilterButton extends StatelessWidget {
               Text(
                 title,
                 style: MyTheme.style.subtitle.copyWith(
-                  color: selected ? MyTheme.color.white : MyTheme.color.black,
+                  color: selected ? MyTheme.color.white : context.blackWhiteColor,
                   fontSize: AppSetting.setFontSize(35),
                 ),
               ),

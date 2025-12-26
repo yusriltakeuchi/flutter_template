@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/button/primary_button.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class IdleLoadingCenter extends StatelessWidget {
@@ -69,7 +70,7 @@ class IdleNoItemCenter extends StatelessWidget {
                       title ?? " ",
                       textAlign: TextAlign.center,
                       style: MyTheme.style.subtitle.copyWith(
-                        color: color ?? MyTheme.color.black,
+                        color: color ?? context.blackWhiteColor,
                         fontSize: AppSetting.setFontSize(36)
                       ),
                     ),
@@ -86,7 +87,7 @@ class IdleNoItemCenter extends StatelessWidget {
                     title ?? " ",
                     textAlign: TextAlign.center,
                     style: MyTheme.style.subtitle.copyWith(
-                      color: color ?? MyTheme.color.black,
+                      color: color ?? context.blackWhiteColor,
                       fontSize: AppSetting.setFontSize(36)
                     ),
                   ),
@@ -107,7 +108,7 @@ class IdleNoItemCenter extends StatelessWidget {
             title ?? " ",
             textAlign: TextAlign.center,
             style: MyTheme.style.subtitle.copyWith(
-              color: color ?? MyTheme.color.black,
+              color: color ?? context.blackWhiteColor,
               fontSize: AppSetting.setFontSize(36)
             )
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/validate/required.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class PrimaryTextfield extends StatefulWidget {
@@ -101,7 +102,7 @@ class _PrimaryTextfieldState extends State<PrimaryTextfield> {
                   style: MyTheme.style.title.copyWith(
                     fontSize: AppSetting.setFontSize(AppSetting.isTablet(context) ? 33 : 38),
                     fontWeight: FontWeight.w600,
-                    color: MyTheme.color.black,
+                    color: context.blackWhiteColor,
                   ),
                 ),
               )
@@ -110,7 +111,7 @@ class _PrimaryTextfieldState extends State<PrimaryTextfield> {
                 style: MyTheme.style.title.copyWith(
                   fontSize: AppSetting.setFontSize(AppSetting.isTablet(context) ? 33 : 38),
                   fontWeight: FontWeight.w600,
-                  color: MyTheme.color.black,
+                  color: context.blackWhiteColor,
                 ),
               ),
         Space.h(widget.title.isEmpty ? 0 : (AppSetting.isTablet(context) ? 30 : 15)),
@@ -187,7 +188,7 @@ class _PrimaryTextfieldState extends State<PrimaryTextfield> {
               contentPadding: widget.contentPadding,
               filled: widget.enableOutline == false,
               fillColor: widget.readOnly == true && widget.useColorReadOnly
-                  ? MyTheme.color.grey.withValues(alpha: 0.4)
+                  ? context.greyDarkColor.withValues(alpha: 0.4)
                   : (widget.backgroundColor ?? const Color(0xffEBF0FF)),
               counterText: "",
               hintStyle: MyTheme.style.subtitle.copyWith(

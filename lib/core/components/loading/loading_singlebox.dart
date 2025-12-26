@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
-import 'package:flutter_template/theme/theme.dart';
+import 'package:flutter_template/extension/extensions.dart';
 
 class LoadingSingleBox extends StatelessWidget {
   final double height;
@@ -17,7 +17,7 @@ class LoadingSingleBox extends StatelessWidget {
     return Container(
       width: AppSetting.deviceWidth,
       height: AppSetting.setHeight(height),
-      color: color ?? MyTheme.color.grey.withValues(alpha: 0.3),
+      color: color ?? context.greyDarkColor.withValues(alpha: 0.3),
     );
   }
 }
@@ -37,7 +37,7 @@ class LoadingSingleBoxCircular extends StatelessWidget {
         width: AppSetting.deviceWidth,
         height: AppSetting.setHeight(height),
         decoration: BoxDecoration(
-          color: MyTheme.color.grey.withValues(alpha: 0.3),
+          color: context.greyDarkColor.withValues(alpha: 0.3),
           shape: BoxShape.circle,
         ),
       ),

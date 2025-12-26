@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
+import 'package:flutter_template/extension/extensions.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class WarningItem extends StatelessWidget {
@@ -38,7 +39,7 @@ class WarningItem extends StatelessWidget {
                 description,
                 style: MyTheme.style.subtitle.copyWith(
                   fontSize: AppSetting.setFontSize(30),
-                  color: MyTheme.color.black,
+                  color: context.blackWhiteColor,
                 ),
               ),
             ),

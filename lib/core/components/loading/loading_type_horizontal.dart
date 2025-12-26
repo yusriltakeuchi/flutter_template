@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/config/app_config.dart';
-import 'package:flutter_template/theme/theme.dart';
+import 'package:flutter_template/extension/extensions.dart';
 
 class LoadingTypeHorizontal extends StatelessWidget {
   final int length;
@@ -25,7 +25,7 @@ class LoadingTypeHorizontal extends StatelessWidget {
               height: AppSetting.setHeight(40),
               margin: const EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
-                color: MyTheme.color.grey.withValues(alpha: 0.3),
+                color: context.greyDarkColor.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
