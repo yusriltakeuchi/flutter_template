@@ -23,6 +23,7 @@
 
 | Feature | Description |
 |---------|-------------|
+| 📱 **Platform Support** | Android & iOS ready |
 | 🏗️ **DDD Architecture** | Clean, scalable code organization |
 | 🧊 **Freezed** | Immutable models & unions |
 | 🎯 **BLoC Pattern** | Predictable state management |
@@ -107,6 +108,42 @@ keyPassword=yourpassword
 keyAlias=youralias
 storeFile=/path/to/key.jks
 ```
+
+---
+
+## 🎨 Generate App Icons
+
+This template uses [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) with flavor support.
+
+### Generate Icons for All Flavors
+
+```bash
+# Generate for development flavor
+flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons.yaml
+
+# Generate for staging flavor
+flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons-staging.yaml
+
+# Generate for production flavor
+flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons-prod.yaml
+```
+
+### Configure Icons
+
+Edit icon configurations in:
+- `flutter_launcher_icons.yaml` - Development flavor icons
+- `flutter_launcher_icons-staging.yaml` - Staging flavor icons
+- `flutter_launcher_icons-prod.yaml` - Production flavor icons
+
+```yaml
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/your_icon.png"
+  # Add more customization as needed
+```
+
+**💡 Tip:** Place your icon files in `assets/icons/` directory and update the `image_path` in the config files.
 
 ---
 
