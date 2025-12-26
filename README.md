@@ -79,6 +79,8 @@ lib/
 │   ├── models/            # Core models
 │   └── networks/          # API client
 ├── 🎨 domain/             # Business logic
+│   ├── cubit/             # Safe cubit base
+│   ├── dto/               # Data Transfer Objects
 │   ├── entities/          # Domain entities
 │   ├── models/            # Domain models
 │   └── repositories/      # Repository interfaces
@@ -136,7 +138,35 @@ storeFile=/path/to/key.jks
 
 Access theme with `BlocBuilder<ThemeBloc>`. Modes: `light`, `dark`, `system`
 
-### � Dynamic Colors
+### 🎯 BLoC State Management
+
+Use `BlocBuilder` with Freezed's `when` or `maybeWhen` for clean state handling:
+
+```dart
+// Using .when() - Handle all states
+BlocBuilder<UserBloc, UserState>(
+  builder: (context, state) {
+    return state.when(
+      initial: () => const IdleLoading(),
+      loading: () => const LoadingListView(),
+      error: (message) => ErrorWidget(message),
+      loaded: (data) => DataView(data),
+    );
+  },
+)
+
+// Using .maybeWhen() - Handle specific states only
+BlocBuilder<ThemeBloc, ThemeState>(
+  builder: (context, state) {
+    return state.maybeWhen(
+      loaded: (mode) => YourWidget(mode),
+      orElse: () => const CircularProgressIndicator(),
+    );
+  },
+)
+```
+
+### 🎨 Dynamic Colors
 
 Use context extensions for theme-aware colors:
 
@@ -158,22 +188,53 @@ Container(
 - `context.backgroundColor` - Screen background
 - `context.greyDarkColor` - Grey text colors
 
-### �🌍 Access Current Flavor
+### 🌍 Access Current Flavor
 
 ```dart
 flavor.current  // Returns: dev, staging, or prod
 ```
 
+### 📐 Responsive Sizing
+
+Use `AppSetting` for responsive dimensions across all devices:
+
+```dart
+// Font Size - automatically adapts to screen size
+Text(
+  'Title',
+  style: TextStyle(fontSize: AppSetting.setFontSize(16)),
+)
+
+// Width & Height
+Container(
+  width: AppSetting.setWidth(200),
+  height: AppSetting.setHeight(100),
+)
+
+// Device dimensions
+AppSetting.deviceWidth   // Full screen width
+AppSetting.deviceHeight  // Full screen height
+
+// Quick spacing
+Space.w(16)  // Horizontal spacing
+Space.h(20)  // Vertical spacing
+
+// Device checks
+AppSetting.isLargePhone(context)
+AppSetting.isTablet(context)
+```
+
 ### 📡 Data Fetching Flow
 
 1. `domain/entities` → Entity
-2. `infrastructure/datasource/base` → API Extension
-3. `infrastructure/datasource` → DataSource
-4. `domain/repositories` → Repository Interface
-5. `infrastructure/repositories` → Repository Implementation
-6. `injection` → Register Dependencies
-7. `bloc` → Create BLoC/Cubit
-8. `presentation` → Build UI
+2. `domain/dto` → DTO with Freezed & JSON serialization
+3. `infrastructure/datasource/base` → API Extension
+4. `infrastructure/datasource` → DataSource
+5. `domain/repositories` → Repository Interface
+6. `infrastructure/repositories` → Repository Implementation
+7. `injection` → Register Dependencies
+8. `bloc` → Create BLoC/Cubit
+9. `presentation` → Build UI
 
 ---
 
