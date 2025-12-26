@@ -1,171 +1,207 @@
-# Flutter Template
+<div align="center">
+
+# 🚀 Flutter Template
+
+### Production-ready Flutter template with clean architecture
 
 <p align="center">
-  <img src="https://i.imghippo.com/files/lxvb2047dRg.png" width="300" height="700">
-  <img src="https://i.imghippo.com/files/nu6826IW.png" width="300" height="700">
+  <img src="https://github.com/yusriltakeuchi/flutter_template/blob/main/screenshot/FLUTTER_TEMPLATE_LIGHT.png?raw=true" width="280" height="580">
+  <img src="https://github.com/yusriltakeuchi/flutter_template/blob/main/screenshot/FLUTTER_TEMPLATE_DARK.png?raw=true" width="280" height="580">
 </p>
-This is a template for creating a new Flutter project with a well-structured architecture and best practices.
 
-:man_mechanic: Created by : Yusril Rapsanjani
+[![Flutter](https://img.shields.io/badge/Flutter-3.38.4-02569B?logo=flutter)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.10.3-0175C2?logo=dart)](https://dart.dev)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Features:
-- **Domain-Driven Design (DDD)**: Organizes code into logical layers for maintainability and scalability.
-- **Freezed**: Utilized for immutable data classes and sealed classes, reducing boilerplate code.
-- **BLoC / Cubit**: Implements state management using the BLoC pattern for a clear separation of concerns.
-- **AutoRoute**: Provides automatic route generation and navigation management.
-- **Multiple Variants**: Supports multiple environments (`dev`, `staging`, `prod`) to facilitate testing and deployment.
-- **Dependency Injection**: Ensures modular and testable code structure.
-- **Error Handling**: Centralized error handling using `Failure` and `ResponseCode` for better debugging and UX.
+[Features](#-features) • [Quick Start](#-quick-start) • [Structure](#-project-structure) • [Documentation](#-documentation)
 
-This template serves as a solid foundation for developing scalable and maintainable Flutter applications. 🚀
+</div>
 
-## :rocket: Tested On Framework
-:arrow_right: Flutter 3.38.4
+---
 
-:arrow_right: Dart 3.10.3
+## ✨ Features
 
-## :hammer: Project Structure
-```
-lib
-│── bloc
-│── config
-│── corer
-│   │── components
-│   │── constant
-│   │── models
-│   │── networks
-│── domain
-│   │── entities
-│   │── models
-│   │── repositories
-│── gen
-│── infrastructure
-│   │── datasource
-│   │── repositories
-│── injection
-│── presentation
-│── routing
-│── theme
-│── utils
-│── app.dart
-│── bootstrap.dart
-│── main.dart
-```
+| Feature | Description |
+|---------|-------------|
+| 🏗️ **DDD Architecture** | Clean, scalable code organization |
+| 🧊 **Freezed** | Immutable models & unions |
+| 🎯 **BLoC Pattern** | Predictable state management |
+| 🗺️ **AutoRoute** | Type-safe navigation |
+| 🌍 **Multi-Flavor** | Dev, Staging, Production environments |
+| 💉 **Dependency Injection** | Modular & testable |
+| 🌓 **Theme Support** | Light, Dark, System modes |
+| 🔧 **Error Handling** | Centralized failure management |
 
-## :computer: Install Template
-1. First you need to install copy_template to generate project based on name
-````
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Install Template
+
+```bash
+# Install copy_template globally
 dart pub global activate copy_template
-````
-2. Install to specific directory on your pc with your project name
-```
-copy_template <project_name> https://github.com/yusriltakeuchi/flutter_template.git <path>
-```
-For example:
-```
-copy_template my_app https://github.com/yusriltakeuchi/flutter_template.git /Users/mac/Documents/FLUTTER_PROJECT
+
+# Create your project
+copy_template my_app https://github.com/yusriltakeuchi/flutter_template.git /path/to/folder
 ```
 
-## :package: Change Package Name
-You can change the package name by running the command below
-```
-dart run change_app_package_name:main com.package.name
-```
-1. Change name in ``android/app/build.gradle`` -> ``productFlavors``
-2. Then change package name in ``utils/flavor/flavor_utils.dart``
+### 2️⃣ Setup Package Name
 
-## :key: Keystore
-1. Create ```key.properties``` file in ``android`` directory with the following content:
-```
-storePassword=yourpassword
-keyPassword=yourpassword
-keyAlias=youralias
-storeFile=yourfilelocation.jks
-```
-2. Place your keystore .jks file in storeFile setting location
+```bash
+# Change package name
+dart run change_app_package_name:main com.your.package
 
-## :rocket: Run The Project
-You can choose to run your project with various variant, currently available is ``dev``, ``staging``, and ``prod``.
+# Update flavor names in:
+# - android/app/build.gradle (productFlavors)
+# - utils/flavor/flavor_utils.dart
 ```
+
+### 3️⃣ Run Project
+
+```bash
 flutter run --flavor dev
 ```
 
-## :first_quarter_moon: Access Flavor Variant
-You can access the flavor variant by using ``FlavorUtils`` class
+**Available flavors:** `dev` | `staging` | `prod`
+
+---
+
+## 📁 Project Structure
+
+```
+lib/
+├── 🎯 bloc/               # State management
+├── ⚙️ config/             # App configuration
+├── 🏗️ core/               # Core utilities
+│   ├── components/        # Reusable widgets
+│   ├── constant/          # Constants
+│   ├── models/            # Core models
+│   └── networks/          # API client
+├── 🎨 domain/             # Business logic
+│   ├── entities/          # Domain entities
+│   ├── models/            # Domain models
+│   └── repositories/      # Repository interfaces
+├── ✨ extension/          # Dart extensions
+├── 🔧 infrastructure/     # Data layer
+│   ├── datasource/        # Data sources
+│   └── repositories/      # Repository implementations
+├── 💉 injection/          # Dependency injection
+├── 📱 presentation/       # UI screens
+├── 🗺️ routing/            # Navigation
+├── 🎨 theme/              # App themes
+└── 🛠️ utils/              # Utilities
+```
+
+---
+
+## 🔐 Android Keystore Setup
+
+Create `android/key.properties`:
+
+```properties
+storePassword=yourpassword
+keyPassword=yourpassword
+keyAlias=youralias
+storeFile=/path/to/key.jks
+```
+
+---
+
+## 📚 Documentation
+
+### 📄 Create New Page
+
+1. **Create screen** in `presentation/`
+2. **Add annotation:**
+   ```dart
+   @RoutePage()
+   class HomeScreen extends StatelessWidget {
+     // Your screen code
+   }
+   ```
+3. **Generate routes:**
+   ```bash
+   make runner-build
+   ```
+4. **Register route** in `route.dart`:
+   ```dart
+   @override
+   List<AutoRoute> get routes => [
+     AutoRoute(page: HomeRoute.page),
+   ];
+   ```
+
+### 🌓 Theme Mode
+
+Access theme with `BlocBuilder<ThemeBloc>`. Modes: `light`, `dark`, `system`
+
+### � Dynamic Colors
+
+Use context extensions for theme-aware colors:
+
 ```dart
-flavor.current
+// Auto-adapts to light/dark theme
+Container(
+  color: context.containerColor,
+  child: Text(
+    'Hello',
+    style: TextStyle(color: context.blackWhiteColor),
+  ),
+)
 ```
 
-## :open_book: Create New Page
-1. You need to create a page on ``presentation`` directory
-2. Add the ``@RoutePage()`` annotation in your screen class, example:
+**Available colors:**
+- `context.isDark` - Check if dark mode is active
+- `context.blackWhiteColor` - Black in light, white in dark
+- `context.containerColor` - Card/container background
+- `context.backgroundColor` - Screen background
+- `context.greyDarkColor` - Grey text colors
+
+### �🌍 Access Current Flavor
+
 ```dart
-@RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Home Screen',
-          style: MyTheme.style.title.copyWith(
-              color: MyTheme.color.white,
-              fontSize: AppSetting.setFontSize(45)
-          ),
-        ),
-        automaticallyImplyLeading: false,
-        backgroundColor: MyTheme.color.primary,
-      ),
-      body: BlocProvider(
-        create: (context) => UserBloc()..getUsers(params: {'page': 1}),
-        child: const HomeBody(),
-      ),
-    );
-  }
-}
-```
-3. Run the make file to generate the code
-```
-make runner-build
-```
-4. open ``route.dart`` file and add your page into routes variables.
-```dart
-  @override
-List<AutoRoute> get routes => [
-  AutoRoute(page: SplashRoute.page, initial: true),
-  AutoRoute(page: HomeRoute.page),
-];
+flavor.current  // Returns: dev, staging, or prod
 ```
 
-## :first_quarter_moon: Support Theme Mode
-You can listen to the mode by using BlocBuilder into ThemeBloc. There are three modes available, ``light``, ``dark``, and ``system``.
+### 📡 Data Fetching Flow
 
-## :information_source: Step to Fetch Data
-1. Create Entity class in ``domain/entities``
-2. Create APIExtension in ``infrastructure/datasource/base/api_datasource_ext.dart``
-3. Create DataSource in ``infrastructure/datasource``
-4. Create Abstract Class Repository in ``domain/repositories``
-5. Create Repository Implementation in ``infrastructure/repositories``
-6. Inject DataSource & Repository in ``injection``
-6. Create Bloc Cubit in ``bloc``
-7. Create Pages in ``presentation``
+1. `domain/entities` → Entity
+2. `infrastructure/datasource/base` → API Extension
+3. `infrastructure/datasource` → DataSource
+4. `domain/repositories` → Repository Interface
+5. `infrastructure/repositories` → Repository Implementation
+6. `injection` → Register Dependencies
+7. `bloc` → Create BLoC/Cubit
+8. `presentation` → Build UI
 
-## :file_folder: File Template IntelliJ
-<img src="https://i.ibb.co.com/S4zvGSv0/Screenshot-2025-02-06-at-09-40-27.png" width="300" height="150">
-You can use the file template to generate the file quickly. It's available to create Entity, DTO and Bloc Cubit.
+---
 
-:arrow_right: [File Template](https://drive.google.com/file/d/1_bDbVwEfTAuccLj3MIjWYE1OomxnQa-7/view?usp=sharing)
+## 🎨 IntelliJ File Templates
 
-How to install:
-1. Download the file template
-2. Open IntelliJ IDEA
-3. Go to ``File`` -> ``Manage IDE Settings`` -> ``Import Settings...``
-4. Choose the file template that you have downloaded
-5. Create new file and you will see the following options.
+Speed up development with pre-built templates for Entity, DTO, and BLoC.
 
-<img src="https://i.ibb.co.com/1YNFP69m/Screenshot-2025-02-06-at-09-46-42.png" width="300" height="150">
+📥 **[Download Templates](https://drive.google.com/file/d/1_bDbVwEfTAuccLj3MIjWYE1OomxnQa-7/view?usp=sharing)**
 
-## :package: My Flutter Package
-:recycle: [assets_cleaner](https://pub.dev/packages/assets_cleaner) - A command-line tool wich helps you to clean your assets folder. It will remove all files that are not used in your project.
+**Installation:**
+1. Download template file
+2. IntelliJ → `File` → `Manage IDE Settings` → `Import Settings`
+3. Select downloaded file
+
+---
+
+## 🔗 Related Packages
+
+[![assets_cleaner](https://img.shields.io/pub/v/assets_cleaner?label=assets_cleaner&color=blue)](https://pub.dev/packages/assets_cleaner)
+
+Clean unused assets from your Flutter project automatically.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Yusril Rapsanjani](https://github.com/yusriltakeuchi)**
+
+⭐ Star this repo if you find it helpful!
+
+</div>

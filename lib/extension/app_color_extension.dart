@@ -22,12 +22,6 @@ extension AppColors on BuildContext {
         : MyTheme.color.white;
   }
 
-  Color get chatBackgroundColor {
-    return Theme.of(this).brightness == Brightness.dark
-        ? const Color(0xff1E1E1E)
-        : const Color(0xffF4F6F8);
-  }
-
   Color get greyDarkColor {
     return Theme.of(this).brightness == Brightness.dark
         ? const Color(0xffB0B3C1)
