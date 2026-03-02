@@ -54,8 +54,7 @@ copy_template my_app https://github.com/yusriltakeuchi/flutter_template.git /pat
 dart run change_app_package_name:main com.your.package
 
 # Update flavor names in:
-# - android/app/build.gradle (productFlavors)
-# - utils/flavor/flavor_utils.dart
+CTRL + R and find 'Flutter Template' and replace with your app name
 ```
 
 ### 3️⃣ Run Project
