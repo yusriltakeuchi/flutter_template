@@ -23,15 +23,15 @@
 
 | Feature | Description |
 |---------|-------------|
-| 📱 **Platform Support** | Android & iOS ready |
-| 🏗️ **DDD Architecture** | Clean, scalable code organization |
-| 🧊 **Freezed** | Immutable models & unions |
-| 🎯 **BLoC Pattern** | Predictable state management |
-| 🗺️ **AutoRoute** | Type-safe navigation |
-| 🌍 **Multi-Flavor** | Dev, Staging, Production environments |
-| 💉 **Dependency Injection** | Modular & testable |
-| 🌓 **Theme Support** | Light, Dark, System modes |
-| 🔧 **Error Handling** | Centralized failure management |
+| **Platform Support** | Android & iOS ready |
+| **DDD Architecture** | Clean, scalable code organization |
+| **Freezed** | Immutable models & unions |
+| **BLoC Pattern** | Predictable state management |
+| **AutoRoute** | Type-safe navigation |
+| **Multi-Flavor** | Dev, Staging, Production environments |
+| **Dependency Injection** | Modular & testable |
+| **Theme Support** | Light, Dark, System modes |
+| **Error Handling** | Centralized failure management |
 
 ---
 
