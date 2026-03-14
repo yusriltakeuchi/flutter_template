@@ -81,11 +81,11 @@ lib/
 │   ├── cubit/             # Safe cubit base
 │   ├── dto/               # Data Transfer Objects
 │   ├── entities/          # Domain entities
-│   ├── models/            # Domain models
 │   └── repositories/      # Repository interfaces
 ├── ✨ extension/          # Dart extensions
 ├── 🔧 infrastructure/     # Data layer
 │   ├── datasource/        # Data sources
+│   ├── models/            # Data models
 │   └── repositories/      # Repository implementations
 ├── 💉 injection/          # Dependency injection
 ├── 📱 presentation/       # Presentation layer

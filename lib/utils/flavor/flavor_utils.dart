@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/injection/injector.dart';
-import 'package:flutter_template/domain/models/flavor/flavor_model.dart';
+import 'package:flutter_template/infrastructure/models/flavor/flavor_model.dart';
 import 'package:flutter_template/gen/assets.gen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
