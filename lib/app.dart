@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_template/bloc/theme/theme_bloc.dart';
+import 'package:flutter_template/presentation//bloc/theme/theme_bloc.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/injection/injector.dart';
 import 'package:flutter_template/utils/flavor/flavor_utils.dart';

@@ -1,8 +1,8 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_template/bloc/theme/theme_bloc.dart';
-import 'package:flutter_template/bloc/user/user_bloc.dart';
+import 'package:flutter_template/presentation/bloc/theme/theme_bloc.dart';
+import 'package:flutter_template/presentation/bloc/user/user_bloc.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/idle/idle_item.dart';
 import 'package:flutter_template/core/components/loading/loading_listview.dart';

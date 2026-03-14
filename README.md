@@ -71,7 +71,6 @@ flutter run --flavor dev
 
 ```
 lib/
-├── 🎯 bloc/               # State management
 ├── ⚙️ config/             # App configuration
 ├── 🏗️ core/               # Core utilities
 │   ├── components/        # Reusable widgets
@@ -89,7 +88,9 @@ lib/
 │   ├── datasource/        # Data sources
 │   └── repositories/      # Repository implementations
 ├── 💉 injection/          # Dependency injection
-├── 📱 presentation/       # UI screens
+├── 📱 presentation/       # Presentation layer
+│   ├── bloc/              # BLoC/Cubit for UI state
+│   └── page/              # UI screens/pages
 ├── 🗺️ routing/            # Navigation
 ├── 🎨 theme/              # App themes
 └── 🛠️ utils/              # Utilities
@@ -150,19 +151,20 @@ flutter_launcher_icons:
 
 ### 📄 Create New Page
 
-1. **Create screen** in `presentation/`
-2. **Add annotation:**
+1. **Create screen** in `presentation/page/`
+2. **(Optional) Create BLoC/Cubit** in `presentation/bloc/` if the page needs state management
+3. **Add annotation:**
    ```dart
    @RoutePage()
    class HomeScreen extends StatelessWidget {
      // Your screen code
    }
    ```
-3. **Generate routes:**
+4. **Generate routes:**
    ```bash
    make runner-build
    ```
-4. **Register route** in `route.dart`:
+5. **Register route** in `route.dart`:
    ```dart
    @override
    List<AutoRoute> get routes => [
@@ -269,8 +271,8 @@ AppSetting.isTablet(context)
 5. `domain/repositories` → Repository Interface
 6. `infrastructure/repositories` → Repository Implementation
 7. `injection` → Register Dependencies
-8. `bloc` → Create BLoC/Cubit
-9. `presentation` → Build UI
+8. `presentation/bloc` → Create BLoC/Cubit
+9. `presentation/page` → Build UI
 
 ---
 

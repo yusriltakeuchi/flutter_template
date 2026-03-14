@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_template/bloc/auth/auth_session_bloc.dart';
+import 'package:flutter_template/presentation//bloc/auth/auth_session_bloc.dart';
 import 'package:flutter_template/config/app_config.dart';
 import 'package:flutter_template/core/components/idle/idle_item.dart';
 import 'package:flutter_template/extension/extensions.dart';
